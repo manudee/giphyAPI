@@ -92,7 +92,7 @@ $(document).ready(function(){
 
 				img.attr("src",results[i].images.fixed_height_still.url)
          		//personImage.attr("src", results[i].images.fixed_height.url);
-         		//img.attr("data-still",results[i].images.fixed_height_still.url);
+         		img.attr("data-still",results[i].images.fixed_height_still.url);
          		img.attr("data-animate",results[i].images.fixed_height.url);
          		img.attr("data-state", "still");
          		img.addClass("myClickedImages")
@@ -124,7 +124,7 @@ $(document).ready(function(){
 
 		else 
 		{
-			$(this).attr("src", $(this).attr("src"));	
+			$(this).attr("src", $(this).attr("data-still"));	
 			$(this).attr("data-state", "still");
 
 		}
