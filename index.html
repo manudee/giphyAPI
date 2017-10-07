@@ -15,19 +15,29 @@
 
 
 <body>
-<div id="dessertItems"></div>
+	<div class="container">
+	
+	<div class="jumbotron">
+		<h1 class="text-center"> Let's have some Desserts!!</h1>
+	</div>
+	
+	<div id="dessertItems" class="btn-toolbar"></div>
 
 
-<form id="dessertForm">
-<label for="dessert-input">Add your favourite dessert</label>
-<input type="text" id="dessert-input"><br>
+		<form id="dessertForm">
+		<label for="dessert-input">Add your favourite dessert </label>
+		<input type="text" id="dessert-input"><br>
+		</form>
+		<input id="add-dessert" class="btn btn-primary" type="submit" value="submit">
+		
+		
+		<div class="row">
+		<div id="desserts"></div>
+		</div>
 
-<input id="add-dessert" type="submit" value="submit">
-</form>
 
 
-<div id="desserts">
-</div>
+	</div>
 
 </body>
 

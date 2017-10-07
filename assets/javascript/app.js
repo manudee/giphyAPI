@@ -1,6 +1,6 @@
 
 
-var desserts = ["Tiramisu", "creme brulee", "Donuts" ];
+var desserts = ["Tiramisu", "creme brulee", "Donuts"];
 
 
 
@@ -33,7 +33,7 @@ var desserts = ["Tiramisu", "creme brulee", "Donuts" ];
  	for (var i = 0; i < desserts.length; i++) {
  		
  		var a = $("<button>");
- 		a.addClass("myDesserts btn btn-primary md-col-2 md-col-offset-2");
+ 		a.addClass("myDesserts btn btn-primary");
  		a.attr("data-name", desserts[i]);
  		a.text(desserts[i]);
  		
@@ -87,19 +87,29 @@ $(document).ready(function(){
 
          		var rating = results[i].rating;
 
+
          		var p = $("<p>").text("Rating: " + results[i].rating);
          		var img = $("<img>");
+              
+               p.addClass("row col-md-1 col-md-offset-1 strong")
+               p.css({ 'color': '#1f8116', 'font-size': '100%'});
+               p.css("font-family", "calibri");
 
-				img.attr("src",results[i].images.fixed_height_still.url)
+               p.css( "background-color","yellow");
+
+
+				   img.attr("src",results[i].images.fixed_height_still.url);
+               img.attr("width", results[i].images.fixed_width.width );
+               img.attr("height", results[i].images.fixed_height.height);
          		//personImage.attr("src", results[i].images.fixed_height.url);
          		img.attr("data-still",results[i].images.fixed_height_still.url);
          		img.attr("data-animate",results[i].images.fixed_height.url);
          		img.attr("data-state", "still");
-         		img.addClass("myClickedImages")
+         		img.addClass("myClickedImages img-responsive thumbnail col-md-4")
 
          		$("#desserts").prepend(img);
          		$("#desserts").prepend(p);
-         		
+         	
          		
          	}
          	
